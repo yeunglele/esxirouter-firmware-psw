@@ -26,7 +26,7 @@ config smartdns
 	option tls_server '0'
 	option doh_server '0'
 	option log_output_mode 'file'
-	option seconddns_port '5335'
+	option seconddns_port '7913'
 	option enabled '1'
 	option old_port '6053'
 	option old_enabled '1'
