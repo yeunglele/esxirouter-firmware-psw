@@ -19,7 +19,12 @@
 # Modify hostname
 #sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
 
-#rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-adguardhome
+rm -rf feeds/luci/applications/luci-app-smartdns
+rm -rf feeds/packages/net/adguardhome
+rm -rf feeds/packages/net/smartdns
+rm -rf feeds/luci/applications/luci-app-passwall
 
 #git clone --depth=1 -b main https://github.com/fw876/helloworld.git package/helloworld
 
@@ -30,9 +35,14 @@ cp -rf kenzok8-packages/ddnsto package/ddnsto
 cp -rf kenzok8-packages/luci-app-ddnsto package/luci-app-ddnsto
 cp -rf kenzok8-packages/wrtbwmon package/wrtbwmon
 cp -rf kenzok8-packages/luci-app-wrtbwmon package/luci-app-wrtbwmon
+cp -rf kenzok8-packages/adguardhome package/adguardhome
+cp -rf kenzok8-packages/luci-app-adguardhome package/luci-app-adguardhome
+cp -rf kenzok8-packages/smartdns package/smartdns
+cp -rf kenzok8-packages/luci-app-smartdns package/luci-app-smartdns
 cp -rf kenzok8-packages/luci-app-passwall package/luci-app-passwall
 
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
