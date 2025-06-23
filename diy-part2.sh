@@ -42,7 +42,7 @@ cp -rf kenzok8-packages/luci-app-smartdns package/luci-app-smartdns
 cp -rf kenzok8-packages/luci-app-passwall package/luci-app-passwall
 
 #git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git
+git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
